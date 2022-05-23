@@ -11,7 +11,7 @@
 		</div>
 		<div class="lg:h-2/5 lg:border-l-2 lg:pl-5">
 			<h2 class="font-semibold text-neutral-300 ml-4 text-sm lg:text-xl">LEGAL</h2>
-			<p class="font-medi text-neutral-400 ml-4 mr-4 mb-2 text-sm lg:text-lg">This is not legally bound to Irvington High School. It is an student owned project which you may use interpret to your own terms.</p>
+			<p class="font-medi text-neutral-400 ml-4 mr-4 mb-2 text-sm lg:text-lg">This is not legally bound to Irvington High School. It is an student owned project which you may interpret to your own terms.</p>
 		</div>
 	</div>
 </template>

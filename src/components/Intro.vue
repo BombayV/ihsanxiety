@@ -1,10 +1,24 @@
-<script setup></script>
+<script setup>
+const scrollTo = (to, duration) => {
+	console.log('test')
+	if (duration <= 0) return;
+	const element = document.getElementById('btn');
+	const difference = to - element.scrollTop;
+	const perTick = difference / duration * 10;
+
+	setTimeout(function() {
+		element.scrollTop = element.scrollTop + perTick;
+		if (element.scrollTop === to) return;
+		scrollTo(element, to, duration - 10);
+	}, 10);
+}
+</script>
 
 <template>
   <div class="grad h-screen relative flex flex-col items-center justify-center z-10">
 		<h1 style="animation: fade 2s" class="mb-2 text-3xl lg:text-7xl font-bold text-gray-50 text-center drop-shadow-2xl">Feeling overwhelmed?</h1>
 		<p style="animation: fadeIn 2s" class="lg:text-2xl font-mont text-center mr-4 ml-4 lg:mr-12 lg:ml-12 font-medium text-gray-300 transition duration-500">This could be a sign of anxiety. Press the button below to keep reading more about it.</p>
-		<button style="animation: fadeBottom 2s" class="lg:pr-10 lg:pl-10 lg:pt-2 lg:pb-2 pb-1.5 pt-1.5 pl-5 pr-5 bg-green-500 hover:bg-green-400 duration-500 lg:text-xl transition rounded-md font-semibold text-gray-900 text-sm mt-6 shadow-md border-none animate-bounce">Learn more about anxiety!</button>
+		<button style="animation: fadeBottom 2s" class="lg:pt-2 lg:pb-2 pb-1.5 pt-1.5 bg-green-500 hover:bg-green-400 duration-500 lg:text-xl transition rounded-md font-semibold text-gray-900 text-sm mt-6 shadow-md border-none animate-bounce"><a class="w-full h-full lg:pr-10 lg:pl-10 lg:pt-2 lg:pb-2 pb-1.5 pt-1.5 pl-5 pr-5" href="#intro">Learn more about anxiety!</a></button>
   </div>
 	<div id="intro" class="h-screen grad-wavy bg-green-700 flex items-center justify-center flex-col">
 		<h2 class="mb-2 text-3xl lg:text-7xl font-bold text-gray-50 text-center drop-shadow-xl">What is anxiety?</h2>

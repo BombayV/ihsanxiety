@@ -20,8 +20,8 @@ defineProps({
 			</span>
 		</div>
 		<div class="w-4/5 h-full flex flex-col items-start justify-evenly">
-			<h2 class="text-lg font-medium text-neutral-200 text-center drop-shadow-xl">{{title}}</h2>
-			<span class="text-left text-md text-neutral-400 transition duration-500 drop-shadow-md mb-4 mr-4">
+			<h2 class="text-lg font-medium text-neutral-200 text-center drop-shadow-xl capitalize lg:mt-2">{{title}}</h2>
+			<span class="text-left text-md text-neutral-400 transition duration-500 drop-shadow-md lg:mb-2 mr-4">
 				{{description}}
 			</span>
 		</div>
